@@ -1,0 +1,30 @@
+<idea-plugin>
+  <id>com.example.intellijidea.plugins.findduplicates</id>
+  <name>Find duplicates inspection (Inspection Demo)</name>
+  <version>1.0</version>
+  <vendor email="https://github.com/markiewb" url="https://github.com/markiewb">https://github.com/markiewb</vendor>
+
+  <description>Example of an inspection, which finds a class with the same fully qualified name. The files can be diffed or deleted.</description>
+
+  <change-notes>Initial commit</change-notes>
+
+  <idea-version since-build="131"/>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <inspectionToolProvider implementation="com.example.intellijidea.plugins.findduplicates.FindDuplicatesInspectionToolProvider"/>
+
+  </extensions>
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+</idea-plugin>

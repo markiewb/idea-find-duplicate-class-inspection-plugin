@@ -1,5 +1,6 @@
 package com.example.intellijidea.plugins.findduplicates;
 
+import com.intellij.codeInsight.daemon.GroupNames;
 import com.intellij.codeInspection.*;
 import org.jetbrains.annotations.*;
 
@@ -12,6 +13,11 @@ public class FindDuplicatesInspection extends LocalInspectionTool {
     @Override
     public String getDisplayName() {
         return "Duplicate classes in classpath (same fully qualified name)";
+    }
+
+    @NotNull
+    public String getGroupDisplayName() {
+        return GroupNames.BUGS_GROUP_NAME;
     }
 
     @NotNull

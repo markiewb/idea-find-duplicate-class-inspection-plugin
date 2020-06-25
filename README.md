@@ -10,8 +10,9 @@ It shows the usage some IDEA APIs:
 <img src="https://raw.githubusercontent.com/markiewb/idea-find-duplicate-class-inspection-plugin/master/doc/inspectionpanel.png"/>
 
 ## Updates 
-      1.0.1: Fixed compatibility warnings from plugin portal #1
-      1.0:   Initial
+      1.2.1: Fixed compatibility warnings from plugin portal #1
+      1.2:   Some renames
+      1.1:   Initial
 
 ## License
 Apache 2.0

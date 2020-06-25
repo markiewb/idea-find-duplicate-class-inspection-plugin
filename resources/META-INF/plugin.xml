@@ -1,12 +1,15 @@
 <idea-plugin>
   <id>com.example.intellijidea.plugins.findduplicates</id>
   <name>Find duplicates inspection</name>
-  <version>1.2</version>
+  <version>1.0.1</version>
   <vendor url="https://github.com/markiewb/idea-find-duplicate-class-inspection-plugin">https://github.com/markiewb/idea-find-duplicate-class-inspection-plugin</vendor>
 
-  <description>Example of an inspection, which finds a class with the same fully qualified name. The files can be diffed or deleted.</description>
+  <description>(Experimental) Inspection, which finds a class with the same fully qualified name. The files can be diffed or deleted.</description>
 
-  <change-notes>1.2 Rename the plugin name</change-notes>
+  <change-notes><![CDATA[
+1.0.1: Fixed compatibility warnings from plugin portal #1 
+    ]]>
+  </change-notes>
 
   <idea-version since-build="131"/>
 
@@ -27,4 +30,7 @@
     <!-- Add your actions here -->
   </actions>
 
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.lang</depends>
+  <depends>com.intellij.modules.java</depends>
 </idea-plugin>

@@ -32,7 +32,7 @@ gradle clean test buildPlugin verifyPlugin
 
 ## Updates
 
-* `1.3.0`: Modernized plugin registration and IntelliJ Platform APIs, added characterization tests and Plugin Verifier coverage, and raised the minimum platform build to `243`.
+* `1.3.0`: Modernized plugin registration and IntelliJ Platform APIs, added tests and raised the minimum platform build to `243`.
 * `1.2.1`: Fixed compatibility warnings from the Plugin Portal.
 * `1.2`: Renamed the plugin and related metadata.
 * `1.1`: Initial release.

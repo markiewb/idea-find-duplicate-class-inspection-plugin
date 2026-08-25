@@ -21,7 +21,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Example of an inspection, which finds a class with the same fully qualified name. The files can be diffed or deleted.
+ * Inspection, which finds a class with the same fully qualified name. The files can be diffed or deleted.
  *
  * @author markiewb
  */

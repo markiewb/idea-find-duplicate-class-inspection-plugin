@@ -1,5 +1,5 @@
 <idea-plugin>
-  <id>de.markiewb.idea.findduplicates</id>
+  <id>com.example.intellijidea.plugins.findduplicates</id>
   <name>Find duplicates inspection</name>
   <version>1.3.0</version>
   <vendor url="https://github.com/markiewb/idea-find-duplicate-class-inspection-plugin">markiewb</vendor>

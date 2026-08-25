@@ -169,3 +169,16 @@ Record the following when executing this plan:
 - Use a valid personal namespace for all future plugins and package renames.
 - Commit only intended source, test, build, and documentation files; exclude generated and system files.
 - Git commits must use `markiewb` as both author and committer.
+
+## Pr"ufung vor Publikation
+Sicherheitsprüfung durchführen
+
+* keine Secrets im Repository;
+* keine unnötigen Netzwerkzugriffe;
+* Eingaben validieren;
+* Updates für Abhängigkeiten;
+* reproduzierbare oder zumindest nachvollziehbare Builds;
+* Security-Kontakt angeben.
+* Datennutzung minimieren
+* keine Telemetrie ohne guten Grund;
+* keine Übertragung von Projektinhalten ohne klare Information;

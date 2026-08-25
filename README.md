@@ -1,18 +1,41 @@
-# Intellij IDEA "find duplicates inspection" plugin
+# IntelliJ IDEA "Find Duplicates" Inspection Plugin
 
-It adds an (experimental) inspection, which finds a class with the same fully qualified name. The files can be diffed or deleted.
+This plugin adds an inspection for Java classes that have the same fully qualified
+name. For each detected duplicate, it provides a `Diff...` quick-fix and, when
+the local file is writable, a `Remove local ...` quick-fix.
 
-It shows the usage some IDEA APIs:
-* How to create an inspection with fixes.
-* How to find classes by their FQN.
-* How to create the diff of two files. 
+The inspection is available under `Probable Bugs` and is enabled by default.
+The plugin targets IntelliJ IDEA Community Edition 2024.3 and later
+(platform build `243`).
 
 <img src="https://raw.githubusercontent.com/markiewb/idea-find-duplicate-class-inspection-plugin/master/doc/inspectionpanel.png"/>
 
-## Updates 
-      1.2.1: Fixed compatibility warnings from plugin portal #1
-      1.2:   Some renames
-      1.1:   Initial
+## Development
+
+Run the plugin in a development IDE:
+
+```bash
+gradle runIde
+```
+
+Run the tests:
+
+```bash
+gradle test
+```
+
+Build and verify the plugin:
+
+```bash
+gradle clean test buildPlugin verifyPlugin
+```
+
+## Updates
+
+* `1.3.0`: Modernized plugin registration and IntelliJ Platform APIs, added characterization tests and Plugin Verifier coverage, and raised the minimum platform build to `243`.
+* `1.2.1`: Fixed compatibility warnings from the Plugin Portal.
+* `1.2`: Renamed the plugin and related metadata.
+* `1.1`: Initial release.
 
 ## License
 Apache 2.0

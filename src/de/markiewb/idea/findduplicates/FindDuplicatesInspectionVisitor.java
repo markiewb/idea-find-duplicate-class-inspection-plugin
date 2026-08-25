@@ -1,4 +1,4 @@
-package com.example.intellijidea.plugins.findduplicates;
+package de.markiewb.idea.findduplicates;
 
 import com.intellij.codeInspection.*;
 import com.intellij.diff.DiffManager;
@@ -113,7 +113,9 @@ public class FindDuplicatesInspectionVisitor extends JavaElementVisitor {
         public void applyFix(@NotNull final Project project, @NotNull ProblemDescriptor descriptor) {
 
             //taken from
-            ReadonlyStatusHandler.getInstance(project).ensureFilesWritable(file);
+            if (!ReadonlyStatusHandler.ensureFilesWritable(project, file)) {
+                return;
+            }
 
             ApplicationManager.getApplication().runWriteAction(new Runnable() {
                 @Override

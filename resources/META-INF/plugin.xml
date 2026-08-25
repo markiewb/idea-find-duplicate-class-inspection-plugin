@@ -1,20 +1,43 @@
 <idea-plugin>
-  <id>com.example.intellijidea.plugins.findduplicates</id>
+  <id>de.markiewb.idea.findduplicates</id>
   <name>Find duplicates inspection</name>
-  <version>1.2.1</version>
+  <version>1.3.0</version>
   <vendor url="https://github.com/markiewb/idea-find-duplicate-class-inspection-plugin">https://github.com/markiewb/idea-find-duplicate-class-inspection-plugin</vendor>
 
-  <description>(Experimental) Inspection, which finds a class with the same fully qualified name. The files can be diffed or deleted.</description>
+  <description><![CDATA[
+    (Experimental) Finds Java classes with the same fully qualified name in the
+    project classpath. For each duplicate, the plugin provides a diff quick-fix
+    and, when the local file is writable, a quick-fix to remove it.
+
+    Requires IntelliJ IDEA Community Edition 2024.3 or later.
+  ]]></description>
 
   <change-notes><![CDATA[
-1.2.1: Fixed compatibility warnings from plugin portal #1 
+1.3.0:
+<ul>
+  <li>Modernized inspection registration using the IntelliJ Platform local inspection API.</li>
+  <li>Removed deprecated inspection category and writable-file API usage.</li>
+  <li>Added characterization tests for duplicate detection and quick-fixes.</li>
+  <li>Added IntelliJ IDEA Community Edition 2024.3 compatibility verification.</li>
+  <li>Raised the minimum supported platform build to 243.</li>
+</ul>
+
+Previous:
+1.2.1: Fixed compatibility warnings from the Plugin Portal.
+1.2: Some renames.
+1.1: Initial release.
     ]]>
   </change-notes>
 
-  <idea-version since-build="131"/>
+  <idea-version since-build="243"/>
 
   <extensions defaultExtensionNs="com.intellij">
-    <inspectionToolProvider implementation="com.example.intellijidea.plugins.findduplicates.FindDuplicatesInspectionToolProvider"/>
+    <localInspection language="JAVA"
+                      shortName="FindDuplicates"
+                      displayName="Duplicate classes in classpath (same fully qualified name)"
+                      groupName="Probable Bugs"
+                      enabledByDefault="true"
+                      implementationClass="de.markiewb.idea.findduplicates.FindDuplicatesInspection"/>
 
   </extensions>
 

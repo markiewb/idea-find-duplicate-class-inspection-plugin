@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>com.example.intellijidea.plugins.findduplicates</id>
   <name>Find duplicates inspection</name>
-  <version>1.3.0</version>
+  <version>1.3.1</version>
   <vendor url="https://github.com/markiewb/idea-find-duplicate-class-inspection-plugin">markiewb</vendor>
 
   <description><![CDATA[
@@ -9,12 +9,17 @@
     project classpath. For each duplicate, the plugin provides a diff quick-fix
     and, when the local file is writable, a quick-fix to remove it.
     <p>
-    Requires IntelliJ IDEA Community Edition 2024.3 or later.
+    Requires IntelliJ IDEA 2024.3 or later.
     <p>
     File issues or fork the project at <a href="https://github.com/markiewb/idea-find-duplicate-class-inspection-plugin">Github</a>
   ]]></description>
 
   <change-notes><![CDATA[
+1.3.1:
+<ul>
+  <li>Removed the upper IntelliJ Platform compatibility limit.</li>
+</ul>
+
 1.3.0:
 <ul>
   <li>Modernized inspection registration using the IntelliJ Platform local inspection API. No more deprecated API usage.</li>

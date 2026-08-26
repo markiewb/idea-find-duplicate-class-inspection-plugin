@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'de.markiewb.idea'
-version = '1.3.0'
+version = '1.3.1'
 
 sourceSets {
     main {
@@ -38,6 +38,7 @@ intellijPlatform {
     pluginConfiguration {
         ideaVersion {
             sinceBuild = '243'
+            untilBuild = provider { null }
         }
     }
     pluginVerification {
@@ -50,6 +51,7 @@ intellijPlatform {
 tasks {
     patchPluginXml {
         sinceBuild = '243'
+        untilBuild = provider { null }
     }
     test {
         useJUnitPlatform()

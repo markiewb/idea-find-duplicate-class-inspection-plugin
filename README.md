@@ -5,8 +5,7 @@ name. For each detected duplicate, it provides a `Diff...` quick-fix and, when
 the local file is writable, a `Remove local ...` quick-fix.
 
 The inspection is available under `Probable Bugs` and is enabled by default.
-The plugin targets IntelliJ IDEA Community Edition 2024.3 and later
-(platform build `243`).
+The plugin targets IntelliJ IDEA 2024.3 and later
 
 <img src="https://raw.githubusercontent.com/markiewb/idea-find-duplicate-class-inspection-plugin/master/doc/inspectionpanel.png"/>
 
@@ -32,6 +31,7 @@ gradle clean test buildPlugin verifyPlugin
 
 ## Updates
 
+* `1.3.1`: Removed the upper IntelliJ Platform compatibility limit.
 * `1.3.0`: Modernized plugin registration and IntelliJ Platform APIs, added tests and raised the minimum platform build to `243`.
 * `1.2.1`: Fixed compatibility warnings from the Plugin Portal.
 * `1.2`: Renamed the plugin and related metadata.
